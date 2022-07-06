@@ -116,8 +116,9 @@ buildInfoWindow (InfoBuffer split_buf) w = savingCurrentWindow $ do
 
 resizeInfoWin :: Window -> InfoBuffer -> Neovim env ()
 resizeInfoWin w ib = do
-  t <- nvim_buf_get_lines (iw_buffer ib) 0 (-1) False
-  window_set_height w $ fromIntegral $ V.length t
+  -- t <- nvim_buf_get_lines (iw_buffer ib) 0 (-1) False
+  -- window_set_height w $ fromIntegral $ V.length t
+  pure ()
 
 
 
