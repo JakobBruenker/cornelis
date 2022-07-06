@@ -102,7 +102,7 @@ buildInfoBuffer = do
 buildInfoWindow :: InfoBuffer -> Window -> Neovim env Window
 buildInfoWindow (InfoBuffer split_buf) w = savingCurrentWindow $ do
   nvim_set_current_win w
-  vim_command "split"
+  vim_command "vsplit"
   split_win <- nvim_get_current_win
   nvim_win_set_buf split_win split_buf
 
